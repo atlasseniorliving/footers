@@ -1,0 +1,380 @@
+<style>
+
+    * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    section.center {
+        background: white;
+    }
+
+    .table__wrapper {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .table__wrapper .table {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ------- Presentational Formatting --------- */
+    h1 {
+        text-align: center;
+    }
+
+    .center {
+        margin: 0 auto;
+    }
+
+    .table {
+        border-collapse: collapse;
+    }
+
+
+    table.table p {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        text-transform: capitalize;
+    }
+
+    p.atlas-footer {
+        color: black
+    }
+
+
+    table.table ul {
+        padding-left: 0;
+    }
+
+    table.table ul li {
+        list-style: none;
+        text-align: left;
+        margin-bottom: -4px;
+    }
+
+    .table td,
+    .table th {
+        padding: .5em;
+        vertical-align: top !important;
+        text-align: left;
+    }
+
+    .table th {
+        text-align: left;
+    }
+
+    @media screen and (max-width:991px) {
+        .table {
+            margin: 0 auto;
+            width: 100%;
+            border-spacing: 0;
+        }
+
+        .table thead {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            padding: 0;
+            border: 0;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+        }
+
+        .table tbody,
+        .table tr,
+        .table th,
+        .table td {
+            display: block;
+            padding: 0;
+            text-align: left;
+            white-space: normal;
+            border: none;
+        }
+
+        .table tr td,
+        .table tr th {
+            padding: 2em 1em;
+            vertical-align: middle;
+            overflow: hidden;
+            position: relative;
+            vertical-align: top;
+            border-top: none;
+            width: 100%;
+            white-space: normal;
+        }
+
+        .table th[scope="row"] {
+            width: 100%;
+            text-align: center;
+            display: block;
+            background-color: #B3BFC6;
+            margin: 0 auto;
+            padding: .5em 0;
+        }
+
+        .table td[data-header]:before {
+            content: attr(data-header);
+            display: block;
+            float: left;
+            width: 50%;
+            color: #000000;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .table td[data-header]>* {
+            display: block;
+            width: 50%;
+            float: right;
+            clear: right;
+            padding-left: 1em;
+            margin-top: 0;
+        }
+
+        .table td[data-header]:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            padding-bottom: 200%;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .center {
+            width: 100%;
+        }
+    }
+
+    /***************footer area******************/
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        height: 60px;
+    }
+
+    .footer-logo img {
+        opacity: 0.7;
+    }
+
+    .footer-locations,
+    .footer-logo {
+        background: #2A2A2A;
+        text-align: center;
+    }
+
+    td img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul.locations-list {
+        margin: 0;
+    }
+
+    table.table ul li a {
+        text-decoration: none !important;
+        color: #000000;
+        font-size: 16px;
+        text-transform: capitalize;
+        text-align: left !important;
+        font-weight: normal;
+        display: block;
+        height: 30px;
+    }
+
+    li.facebook,
+    li.linkedin,
+    li.instagram,
+    li.youtube {
+        margin-bottom: 15px !important;
+    }
+
+    table.table ul li a.facebook {
+        text-decoration: none;
+        background-image: url("https://atlasseniorliving.com/wp-content/uploads/2022/09/facebook-color-logo.png");
+        background-repeat: no-repeat;
+        padding-top: 3px;
+        padding-bottom: 5px;
+        padding-left: 35px;
+    }
+
+    table.table ul li a.linkedin {
+        text-decoration: none;
+        background-image: url("https://atlasseniorliving.com/wp-content/uploads/2022/09/linked-in-color-logo.png");
+        background-repeat: no-repeat;
+        padding-bottom: 5px;
+        padding-top: 3px;
+        padding-left: 35px;
+    }
+
+    table.table ul li a.instagram {
+        text-decoration: none;
+        background-image: url("https://atlasseniorliving.com/wp-content/uploads/2022/09/instagram-color-logo-1.png");
+        background-repeat: no-repeat;
+        padding-bottom: 5px;
+        padding-top: 3px;
+        padding-left: 35px;
+    }
+
+    table.table ul li a.youtube {
+        text-decoration: none;
+        background-image: url("https://atlasseniorliving.com/wp-content/uploads/2022/09/youtube-color-logo.png");
+        background-repeat: no-repeat;
+        padding-bottom: 5px;
+        padding-top: 1px;
+        border-radius: 7px;
+        padding-left: 35px;
+    }
+
+    table.table ul li a:hover {
+        text-decoration: underline !important;
+        color: #8E8E8E;
+    }
+
+    .table td,
+    th {
+        border: none;
+    }
+
+    .table__wrapper .table {
+        border: none;
+    }
+
+    a.link {
+        text-decoration: none;
+        opacity: 0.7;
+        text-transform: capitalize !important;
+        font-weight: 300;
+    }
+
+    a.link:hover {
+        text-decoration: underline;
+    }
+
+    h4.footer-phone {
+        font-size: 1.4em;
+        text-align: left;
+        color: black;
+        padding-top: 10px;
+        ;
+    }
+
+    ul.locations-list li {
+        display: inline;
+        color: #8E8E8E;
+        font-family: arial;
+        font-size: medium;
+        padding-right: 40px;
+    }
+
+    .footer-copyright {
+        background: #2A2A2A;
+        color: #727373;
+        text-align: center !important;
+        padding-bottom: 20px !important;
+    }
+
+    .footer-copyright h5.copyright {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        margin: 0;
+        padding: 20px;
+        text-align: center !important;
+        text-transform: capitalize !important;
+        font-weight: 200;
+        font-size: 14px;
+        color: white;
+    }
+
+    h3.footer-title-column {
+        text-transform: capitalize;
+        color: black;
+        padding-top: 15px;
+        font-weight: 100;
+        font-family: arial !important;
+        opacity: 0.7;
+    }
+
+    a.bug {
+        font-size: 12px;
+        color: darkgrey;
+        text-transform: none !important;
+    }
+
+
+    /*---------------- MARGINS--------------*/
+
+    .footer-adv .ast-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-adv-overlay {
+        padding-bottom: 0;
+    }
+
+    img.housing {
+        opacity: 0.8;
+    }
+
+    p#date {
+        display: initial;
+    }
+
+    a.link {
+        color: white !important;
+    }
+
+    img.BSL {
+        position: relative;
+        margin-top: 10px;
+    }
+</style>
+<div class="footer-logo">
+    <a href="https://atlasseniorliving.com" target="_blank"><img
+            src="https://atlasseniorliving.com/wp-content/uploads/2022/07/brand-slogan-logo.png" width="377"
+            height="35"></a>
+
+</div>
+
+<div class="footer-locations">
+    <ul class="locations-list">
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">Alabama</a></li>
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">Florida</a></li>
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">Georgia</a></li>
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">Kentucky</a></li>
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">Mississippi</a></li>
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">South Carolina</a></li>
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">Tennessee</a></li>
+        <li><a class="link" href="https://atlasseniorliving.com/our-communities/" target="_blank">Texas</a></li>
+    </ul>
+</div>
+
+<div class="footer-copyright">
+
+    <h5 class="copyright">
+        <p id="date"></p> Copyright © Atlas Senior Living - <a class="link"
+            href="https://atlasseniorliving.com/privacy-policy/" target="_blank">Privacy Policy</a> | <a class="link"
+            href="#" target="_blank">Terms of Use</a> | <a class="link"
+            href="https://atlasseniorliving.com/madison-clermont/careers/" target="_blank">Careers</a> | <a class="bug"
+            href="https://atlasseniorliving.com/website-feedback/" target="_blank">𓆣 Report a bug or technical
+            issue</a>
+    </h5>
+</div>
+
+<script>
+    //auto actualizacion de año con javascript
+    const d = new Date();
+    let year = d.getFullYear();
+    document.getElementById("date").innerHTML = year;
+                //debe de correr despues del ID indicado
+
+</script>
